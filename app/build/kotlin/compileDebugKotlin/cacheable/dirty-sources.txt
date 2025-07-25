@@ -1,0 +1,7 @@
+C:\Users\adric\Downloads\ListaDeTareas_AndroidStudio\app\src\main\java\com\example\timeblocker\MainActivity.kt
+C:\Users\adric\Downloads\ListaDeTareas_AndroidStudio\app\src\main\java\com\example\timeblocker\data\TaskRepository.kt
+C:\Users\adric\Downloads\ListaDeTareas_AndroidStudio\app\src\main\java\com\example\timeblocker\ui\list\TaskListScreen.kt
+C:\Users\adric\Downloads\ListaDeTareas_AndroidStudio\app\src\main\java\com\example\timeblocker\model\Task.kt
+C:\Users\adric\Downloads\ListaDeTareas_AndroidStudio\app\src\main\java\com\example\timeblocker\ui\theme\Theme.kt
+C:\Users\adric\Downloads\ListaDeTareas_AndroidStudio\app\src\main\java\com\example\timeblocker\ui\TimeBlockerApp.kt
+C:\Users\adric\Downloads\ListaDeTareas_AndroidStudio\app\src\main\java\com\example\timeblocker\ui\calendar\TaskCalendarScreen.kt
