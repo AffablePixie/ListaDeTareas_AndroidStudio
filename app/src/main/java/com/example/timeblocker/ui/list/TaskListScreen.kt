@@ -213,7 +213,12 @@ fun TaskListScreen(
         // Diálogo para nueva tarea o edición
         if (showDialog) {
             var title by remember { mutableStateOf(currentEditingTask?.title ?: "") }
-            var startTime by remember { mutableStateOf(currentEditingTask?.start?.toLocalTime() ?: LocalTime.of(9, 0)) }
+            var startTime by remember { 
+                mutableStateOf(
+                    currentEditingTask?.start?.toLocalTime() 
+                    ?: viewModel.getDefaultStartTimeForDay(selectedDay)
+                ) 
+            }
             var endTime by remember { mutableStateOf(currentEditingTask?.end?.toLocalTime() ?: LocalTime.of(10, 0)) }
             var error by remember { mutableStateOf("") }
             val context = LocalContext.current

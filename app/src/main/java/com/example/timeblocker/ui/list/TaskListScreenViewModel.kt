@@ -8,6 +8,7 @@ import com.example.timeblocker.model.Task
 import kotlinx.coroutines.flow.*
 import java.time.LocalDate
 import java.time.LocalDateTime
+import java.time.LocalTime
 
 class TaskListScreenViewModel : ViewModel() {
     // Día seleccionado como StateFlow
@@ -32,6 +33,38 @@ class TaskListScreenViewModel : ViewModel() {
 
     fun initialize(context: Context) {
         TaskRepository.initialize(context)
+    }
+
+    /**
+     * Calcula la hora de inicio por defecto para una nueva tarea en el día especificado.
+     * Si no hay tareas en el día, devuelve 9:00.
+     * Si hay tareas, devuelve la hora de fin de la última tarea que termine ese mismo día.
+     */
+    fun getDefaultStartTimeForDay(day: LocalDate): LocalTime {
+        val tasksForDay = tasks.value.filter { task ->
+            // Solo considerar tareas que empiecen en el día especificado
+            task.start.toLocalDate() == day
+        }
+        
+        if (tasksForDay.isEmpty()) {
+            // Si no hay tareas, usar 9:00 por defecto
+            return LocalTime.of(9, 0)
+        }
+        
+        // Filtrar tareas que terminan en el mismo día (excluir las que terminan al día siguiente)
+        val tasksEndingSameDay = tasksForDay.filter { task ->
+            task.end.toLocalDate() == day
+        }
+        
+        if (tasksEndingSameDay.isEmpty()) {
+            // Si todas las tareas terminan al día siguiente, usar 9:00 por defecto
+            return LocalTime.of(9, 0)
+        }
+        
+        // Encontrar la hora de fin más tardía de las tareas que terminan ese día
+        val latestEndTime = tasksEndingSameDay.maxOf { it.end.toLocalTime() }
+        
+        return latestEndTime
     }
 
     fun toggleDone(task: Task) {
