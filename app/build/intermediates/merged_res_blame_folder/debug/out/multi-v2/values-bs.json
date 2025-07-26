@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.timeblocker.app-mergeDebugResources-46:/values-bs/values-bs.xml",
+            "outputFile": "com.example.timeblocker.app-mergeDebugResources-48:/values-bs/values-bs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\adric\\.gradle\\caches\\9.0-milestone-1\\transforms\\75d062553d4176c6c397da08301345d0\\transformed\\core-1.10.1\\res\\values-bs\\values-bs.xml",

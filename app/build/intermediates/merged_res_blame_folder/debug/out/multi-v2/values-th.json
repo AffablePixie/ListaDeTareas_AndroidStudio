@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.timeblocker.app-mergeDebugResources-46:/values-th/values-th.xml",
+            "outputFile": "com.example.timeblocker.app-mergeDebugResources-48:/values-th/values-th.xml",
             "map": [
                 {
                     "source": "C:\\Users\\adric\\.gradle\\caches\\9.0-milestone-1\\transforms\\a7fc18e59aa8bf5049b4a299506d0e33\\transformed\\jetified-ui-release\\res\\values-th\\values-th.xml",

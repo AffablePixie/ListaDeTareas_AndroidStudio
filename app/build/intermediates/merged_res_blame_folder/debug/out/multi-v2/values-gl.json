@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.timeblocker.app-mergeDebugResources-46:/values-gl/values-gl.xml",
+            "outputFile": "com.example.timeblocker.app-mergeDebugResources-48:/values-gl/values-gl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\adric\\.gradle\\caches\\9.0-milestone-1\\transforms\\5951994e4a6d75231d6e550af22a9b04\\transformed\\jetified-material3-1.1.0\\res\\values-gl\\values-gl.xml",
